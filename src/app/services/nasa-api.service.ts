@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NasaApiService {
-  private API_URL = 'https://images-api.nasa.gov';
 
-  constructor(private http: HttpClient) {}
+  private apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=5';
+
+  constructor(private http: HttpClient) { }
 
   getRecentImages(): Observable<any> {
-    return this.http.get(`${this.API_URL}/search?q=recent&media_type=image`);
+    return this.http.get(this.apiUrl);
   }
 }
