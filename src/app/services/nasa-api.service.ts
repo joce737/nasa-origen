@@ -6,11 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NasaApiService {
-  private apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
 
-  constructor(private http: HttpClient) {}
+  private apiUrl = 'https://api.nasa.gov/your_endpoint'; // Reemplaza con tu URL de la API de la NASA
+  private apiKey = 'your_api_key'; // Reemplaza con tu API Key de la NASA
 
-  getRecentImages(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  constructor(private http: HttpClient) { }
+
+  getRecentImages(): Observable<any[]> {
+    const url = `${this.apiUrl}/endpoint?api_key=${this.apiKey}&params`; // Reemplaza con tu endpoint y parámetros
+    return this.http.get<any[]>(url);
   }
 }

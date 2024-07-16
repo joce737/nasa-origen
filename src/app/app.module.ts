@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module'; // Importa el módulo de rutas
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { RecentImagesComponent } from './components/recent-images/recent-images.component';
@@ -26,7 +26,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule // Importa el módulo de rutas en los imports
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

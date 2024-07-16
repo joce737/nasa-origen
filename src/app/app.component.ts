@@ -7,14 +7,12 @@ import { NasaApiService } from './services/nasa-api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Welcome to my Angular App'; // Agregamos la propiedad title
-
   images: any[] = [];
 
   constructor(private nasaApiService: NasaApiService) {}
 
   ngOnInit(): void {
-    this.getRecentImages(); // Llamamos a la función para obtener las imágenes al inicializar
+    this.getRecentImages();
   }
 
   getRecentImages(): void {
