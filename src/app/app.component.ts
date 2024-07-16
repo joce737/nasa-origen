@@ -7,7 +7,6 @@ import { NasaApiService } from './services/nasa-api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Mi Aplicación'; // Define la propiedad title
   images: any[] = [];
 
   constructor(private nasaApiService: NasaApiService) {}
@@ -18,8 +17,11 @@ export class AppComponent implements OnInit {
 
   getRecentImages(): void {
     this.nasaApiService.getRecentImages().subscribe(
-      (data: any[]) => {
-        this.images = data;
+      (data: any) => {
+        this.images = data.collection.items.map((item: any) => ({
+          url: item.links[0].href,
+          title: item.data[0].title
+        }));
       },
       (error) => {
         console.error('Error fetching recent images:', error);

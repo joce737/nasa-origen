@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-recent-images',
@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RecentImagesComponent implements OnInit {
   @Input() images: any[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }
