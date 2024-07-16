@@ -4,13 +4,12 @@ import { NasaApiService } from '../../services/nasa-api.service';
 @Component({
   selector: 'app-recent-images',
   templateUrl: './recent-images.component.html',
-  styleUrls: ['./recent-images.component.css']
+  styleUrls: ['./recent-images.component.css'] // Ajusta la ruta si es necesario
 })
 export class RecentImagesComponent implements OnInit {
-
   images: any[] = [];
 
-  constructor(private nasaApiService: NasaApiService) { }
+  constructor(private nasaApiService: NasaApiService) {}
 
   ngOnInit(): void {
     this.nasaApiService.getRecentImages().subscribe((data: any[]) => {
@@ -18,4 +17,3 @@ export class RecentImagesComponent implements OnInit {
     });
   }
 }
-

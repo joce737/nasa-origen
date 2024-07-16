@@ -1,21 +1,18 @@
+// app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
-import { RecentImagesComponent } from './components/recent-images/recent-images.component';
-import { NasaApiService } from './services/nasa-api.service';
+import { RecentImagesComponent } from './components/recent-images/recent-images.component'; // Importa el componente
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecentImagesComponent
+    RecentImagesComponent // Declara el componente aquí
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule
+    BrowserModule
   ],
-  providers: [NasaApiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

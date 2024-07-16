@@ -1,0 +1,8 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa del viewport */
+    background-color: #0f0f3d; /* Azul oscuro */
+    color: white; /* Texto blanco */
+  }
