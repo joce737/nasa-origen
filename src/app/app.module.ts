@@ -1,16 +1,17 @@
-// app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { RecentImagesComponent } from './components/recent-images/recent-images.component'; // Importa el componente
+import { AppRoutingModule } from './app-routing.module'; // Asegúrate de que la ruta sea correcta
+import { AppComponent } from './app.component'; // Asegúrate de que la ruta sea correcta
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RecentImagesComponent // Declara el componente aquí
+    AppComponent
+    // Agrega aquí otros componentes que tengas declarados en tu AppModule
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
+    // Agrega aquí otros módulos que estés importando en tu AppModule
   ],
   providers: [],
   bootstrap: [AppComponent]

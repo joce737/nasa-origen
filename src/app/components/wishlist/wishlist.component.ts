@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-wishlist',
-  standalone: true,
-  imports: [],
   templateUrl: './wishlist.component.html',
-  styleUrl: './wishlist.component.css'
+  styleUrls: ['./wishlist.component.css']
 })
-export class WishlistComponent {
+export class WishlistComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic here
+  }
 }

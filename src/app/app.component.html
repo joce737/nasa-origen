@@ -1,6 +1,22 @@
-<div class="app-container">
-    <h1>Bienvenidos</h1>
-    <p>Contenido del componente principal</p>
-    <app-recent-images></app-recent-images>
-  </div>
-  
+<div class="header">
+  <h1>Welcome to My Angular App</h1>
+  <nav>
+    <ul>
+      <li><a routerLink="/popular-media">Popular Media</a></li>
+      <li><a routerLink="/search-media">Search Media</a></li>
+      <li><a routerLink="/filter-media">Filter Media</a></li>
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/wishlist">Wishlist</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="welcome-content">
+  <h1>Bienvenidos</h1>
+  <p>Contenido del componente principal</p>
+</div>
+
+<div class="image-container">
+  <app-recent-images></app-recent-images>
+</div>

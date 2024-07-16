@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-filter-media',
-  standalone: true,
-  imports: [],
   templateUrl: './filter-media.component.html',
-  styleUrl: './filter-media.component.css'
+  styleUrls: ['./filter-media.component.css']
 })
-export class FilterMediaComponent {
+export class FilterMediaComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic here
+  }
 }

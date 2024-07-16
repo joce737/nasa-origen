@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-popular-media',
-  standalone: true,
-  imports: [],
   templateUrl: './popular-media.component.html',
-  styleUrl: './popular-media.component.css'
+  styleUrls: ['./popular-media.component.css']
 })
-export class PopularMediaComponent {
+export class PopularMediaComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic here
+  }
 }

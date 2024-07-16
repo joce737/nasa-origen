@@ -1,13 +1,23 @@
+.welcome-content {
+  text-align: center; /* Centra horizontalmente el contenido */
+  margin-top: 20px; /* Ajusta según sea necesario */
+  background-color: #0f0f3d; /* Azul oscuro */
+  color: white; /* Texto blanco */
+}
+
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Altura completa del viewport */
+  min-height: 100vh;
   background-color: #0f0f3d; /* Azul oscuro */
   color: white; /* Texto blanco */
 }
 
 .image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra las imágenes */
   border: 1px solid #ddd;
   padding: 10px;
   margin: 10px;

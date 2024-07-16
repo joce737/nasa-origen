@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-search-media',
-  standalone: true,
-  imports: [],
   templateUrl: './search-media.component.html',
-  styleUrl: './search-media.component.css'
+  styleUrls: ['./search-media.component.css']
 })
-export class SearchMediaComponent {
+export class SearchMediaComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic here
+  }
 }

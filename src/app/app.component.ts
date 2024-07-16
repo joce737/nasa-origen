@@ -4,7 +4,7 @@ import { NasaApiService } from './services/nasa-api.service'; // Ajusta la ruta 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Ajusta la ruta si es necesario
+  styleUrls: ['./components/recent-images/recent-images.component.css'] // Ajusta la ruta si es necesario
 })
 export class AppComponent implements OnInit {
   images: any[] = [];
