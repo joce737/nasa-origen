@@ -2,13 +2,6 @@
   <h1>Bienvenidos</h1>
   <p>Contenido del componente principal</p>
 </div>
-
-<div class="image-container">
-  <div *ngFor="let image of images">
-    <img [src]="image.url" [alt]="image.title">
-  </div>
-</div>
-
 <nav>
   <ul>
     <li><a routerLink="/popular-media">Popular Media</a></li>
@@ -21,4 +14,10 @@
   </ul>
 </nav>
 
+<div class="image-container">
+  <div *ngFor="let image of images">
+    <img [src]="image.url" [alt]="image.title">
+  </div>
+</div>
+<app-recent-images></app-recent-images>
 <router-outlet></router-outlet>

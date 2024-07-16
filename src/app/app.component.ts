@@ -7,6 +7,7 @@ import { NasaApiService } from './services/nasa-api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'Mi Aplicación'; // Define la propiedad title
   images: any[] = [];
 
   constructor(private nasaApiService: NasaApiService) {}

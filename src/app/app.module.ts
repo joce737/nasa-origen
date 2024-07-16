@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
 
 import { AppComponent } from './app.component';
 import { RecentImagesComponent } from './components/recent-images/recent-images.component';
@@ -11,6 +12,7 @@ import { FilterMediaComponent } from './components/filter-media/filter-media.com
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { NasaApiService } from './services/nasa-api.service'; // Importa NasaApiService
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule // Añade HttpClientModule a los imports
   ],
-  providers: [],
+  providers: [NasaApiService], // Añade NasaApiService a los providers
   bootstrap: [AppComponent]
 })
 export class AppModule { }

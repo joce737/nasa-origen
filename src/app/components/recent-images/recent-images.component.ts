@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { NasaApiService } from '../../services/nasa-api.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-recent-images',
@@ -7,13 +6,9 @@ import { NasaApiService } from '../../services/nasa-api.service';
   styleUrls: ['./recent-images.component.css']
 })
 export class RecentImagesComponent implements OnInit {
-  images: any[] = [];
+  @Input() images: any[] = [];
 
-  constructor(private nasaApiService: NasaApiService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.nasaApiService.getRecentImages().subscribe((data: any[]) => {
-      this.images = data;
-    });
-  }
+  ngOnInit(): void { }
 }
