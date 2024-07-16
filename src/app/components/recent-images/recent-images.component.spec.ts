@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RecentImagesComponent } from './recent-images.component';
 
 describe('RecentImagesComponent', () => {
@@ -8,10 +7,12 @@ describe('RecentImagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RecentImagesComponent]
+      declarations: [ RecentImagesComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(RecentImagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
