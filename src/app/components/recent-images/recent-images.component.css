@@ -1,18 +1,28 @@
-/* Estilos CSS para el componente recent-images */
-.image-container {
+/* Estilo para el contenedor de imágenes */
+.images-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-.image-item {
+/* Estilo para cada tarjeta de imagen */
+.image-card {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
+  text-align: center;
   width: 200px;
 }
 
-.image-item img {
-  width: 100%;
-  height: auto;
+/* Estilo para las imágenes */
+.image-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Estilo para el texto de las imágenes */
+.image-card p {
+  color: white;
 }

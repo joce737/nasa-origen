@@ -1,7 +1,15 @@
+<!-- Barra de tareas -->
+<div class="header">
+  <h1></h1>
+</div>
+
+<!-- Contenido de bienvenida -->
 <div class="welcome-content">
   <h1>Bienvenidos</h1>
   <p>Contenido del componente principal</p>
 </div>
+
+<!-- Navegación -->
 <nav>
   <ul>
     <li><a routerLink="/popular-media">Popular Media</a></li>
@@ -14,10 +22,11 @@
   </ul>
 </nav>
 
-<div class="image-container">
-  <div *ngFor="let image of images">
-    <img [src]="image.url" [alt]="image.title">
-  </div>
+<!-- Contenido principal -->
+<div class="content">
+  <!-- Contenedor de imágenes -->
+  <app-recent-images [images]="images"></app-recent-images>
 </div>
-<app-recent-images></app-recent-images>
+
+<!-- Router outlet para cargar otros componentes -->
 <router-outlet></router-outlet>
